@@ -10,25 +10,45 @@ let Voiture = {
     "vitesseMaxi" : "120km/h"
 };
 
+let container = document.getElementById("container");
+container.style.width ='80%';
+container.style.margin = '10px'
+container.style.display = "flex";
+container.style.justifyContent = 'center';
+
 let title = document.querySelector('header');
+title.style.width = "80%";
 title.style.fontSize = "2rem";
 title.innerHTML = Voiture.Nom + " par le constructeur " + Voiture.Contructeur;
+title.style.textAlign = "center";
 
 // image
 let frame = document.getElementById('frame');
+frame.style.width = "53%";
 let picture = document.createElement('img');
 picture.src = Voiture.imgUrl;
 frame.appendChild(picture);
 
-// title
+// description
+let about = document.getElementById('about');
+about.style.fontSize = '1.5rem';
 let name = document.getElementById('name');
 name.style.fontSize = "2rem";
 name.innerHTML = Voiture.Nom;
 
-// description
 let wheel = document.getElementById('wheel');
 wheel.innerHTML = Voiture.nombresRoues;
+
+let door = document.getElementById('door');
+door.innerHTML = Voiture.nombrePortes;
 
 let color = document.getElementById('color');
 color.innerHTML = Voiture.Couleur;
 
+let power = document.getElementById('power');
+power.innerHTML = Voiture.Carburant;
+
+document.getElementById('km').innerHTML = Voiture.Autonomie;
+
+let speed = document.getElementById('speed');
+speed.innerHTML = Voiture.vitesseMaxi;
